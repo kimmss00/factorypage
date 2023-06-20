@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ERP.css">
+    <link rel="stylesheet" href="jang.css">
+    <!--  -->
+    <style>
+        table, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            position: relative;
+            margin: 10px 10px;
+        }
+
+        td {
+            width: 185px;
+            height: 40px;
+            text-align: center;
+        }
+    </style>
+    <!--  -->
+</head>
+<body>
+    <!-- 전체 범위 -->
+    <div id = "boarder">
+        <!-- UI구현 영역 -->
+        <div class = "contentMain">
+            <!-- 왼쪽 영역 -->  
+            <div class = "leftSide">
+                <!-- Logo -->
+                <div class="leftLogo">
+                    <text style="font-size:100px">Logo</text>
+                </div>
+                <!-- Menu -->
+                <div class = "leftMenuBoard">
+                    <div class = "leftMenu">
+                        <a href="ERP.html" style="text-decoration: none; text-align: left;">생산 일정 관리</a>
+                    </div>
+                    <div class = "leftMenu">
+                        <a href="ERP.html" style="text-decoration: none; text-align: left;">작업 관리</a>
+                    </div>
+                    <div class = "leftMenu">
+                        <a href="ERP.html" style="text-decoration: none; text-align: left;">자원 예약 및 관리</a>
+                    </div>
+                    <div class = "leftMenu">
+                        <a href="ERP.html" style="text-decoration: none; text-align: left;">생산 현황 모니터링</a>
+                    </div>
+                    <div class = "leftMenu">
+                        <a href="ERP.html" style="text-decoration: none; text-align: left;">보고서 및 분석 기능</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 오른쪽 영역 -->
+            <div class = "rightSide">
+                <div class = "rightHeader">
+                    <text style="font-size:50px">title</text> 
+                </div>
+                <!-- 영역1 - 검색기능, 일정 등록 버튼 -->
+                <div class = "rightFirst">
+                    <div class="searchBar" style="background-color: blueviolet;">
+                        <div>
+                            <label>
+                                <a>품목/품명</a>
+                                <input type="text" name="itemCd"/>
+                                <input type="text" name="itemNm"/>
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <a>상태</a>
+                                <select name="searchState">
+                                    <option value="">선택</option>
+                                    <option value="">예정</option>
+                                    <option value="">진행</option>
+                                    <option value="">중단</option>
+                                    <option value="">확정</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <a>우선 순위</a>
+                                <select name="searchState">
+                                    <option value="">선택</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="searchBtnDiv">
+                            <button type="button" class="searchBtn">검색</button>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+                <!-- 주간일정 -->
+                <div class = "rightMiddle">
+                     <!-- <h1>표</h1> -->
+                    <div style="background-color: white; border-radius: 20px;">
+                        <table border="1">
+                            <table id="priorityChart">
+                                <tr>
+                                    <td>No</td>
+                                    <td>우선순위</td>
+                                    <td>품번</td>
+                                    <td>품명</td>
+                                    <td>상태</td>
+                                    <td>납기일</td>
+                                    <td>계획수량</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>BS-036</td>
+                                    <td>비비빅</td>
+                                    <td>예정</td>
+                                    <td>2023-07-01</td>
+                                    <td>500</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>BS-001</td>
+                                    <td>스크류바</td>
+                                    <td>진행</td>
+                                    <td>2023-07-25</td>
+                                    <td>380</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>BS-021</td>
+                                    <td>테트리스</td>
+                                    <td>진행</td>
+                                    <td>2023-06-29</td>
+                                    <td>200</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>2</td>
+                                    <td>BS-085</td>
+                                    <td>와일드바디</td>
+                                    <td>확정</td>
+                                    <td>2023-08-13</td>
+                                    <td>850</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>9</td>
+                                    <td>BT-011</td>
+                                    <td>설레임</td>
+                                    <td>예정</td>
+                                    <td>2023-09-23</td>
+                                    <td>400</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>BS-049</td>
+                                    <td>누가바</td>
+                                    <td>진행</td>
+                                    <td>2023-07-28</td>
+                                    <td>550</td>
+                                </tr>
+                            </table>
+                        </table>
+                    </div>
+                </div>
+                <!-- 달력 및 bar chart -->
+                <div class = "rightBottom">
+                    <!-- 영역3-1 주간일정 -->
+                    <div class="bottom">
+                        <div style="">
+                            <h1>달력</h1>
+                        </div>
+                    </div>
+                    <!-- 영역3-2 bar chart -->
+                    <div class="bottom">
+                        <h1>그래프</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
